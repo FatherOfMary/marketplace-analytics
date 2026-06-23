@@ -1,0 +1,11 @@
+# Core interactive computing environment
+ipython==9.14.1
+
+# Fundamental package for scientific computing and array manipulation
+numpy==2.5.0
+
+# Data analysis and manipulation library
+pandas==3.0.3
+
+# Interactive graphing and data visualization library
+plotly==6.8.0

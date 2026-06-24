@@ -1,23 +1,13 @@
-# ==============================================================================
 # Python Environment
-# ==============================================================================
-# Ignores the local virtual environment folder. This prevents third-party 
-# packages from being committed to the repository.
+# ------------------------------------------------------------------------------
+# Prevents local virtual environments and third-party packages from being 
+# tracked or committed to the repository.
 .venv/
 
-# ==============================================================================
-# Project Documentation
-# ==============================================================================
-# Ignores the company profile information AI testing document to ensure 
-# internal SOPRA guidelines remain private.
-doc/Dokumen Pengujian AI_ Informasi Profil Perusahaan (SOPRA).docx
-
-# ==============================================================================
-# Project Data & Artifacts
-# ==============================================================================
-# Ignores all generated files inside the processed data folder, but keeps the 
-# folder structure intact so the pipeline has a place to save outputs.
-data/processed/*
-
-# Ignores generated tabular outputs (CSVs).
-outputs/tables/*
+# Company Profiles & Executive Summaries
+# ------------------------------------------------------------------------------
+# Excludes company job application requirement documents, consisting of 
+# corporate profiles and executive summaries.
+docs/Dokumen Pengujian AI_ Informasi Profil Perusahaan (SOPRA).docx
+docs/Ringkasan-Eksekutif-Optimasi-Inventaris.pdf
+docs/

@@ -9,6 +9,43 @@ An end-to-end analytics project that uses marketplace transaction data to identi
 
 ---
 
+# 📌 Portfolio Assets
+
+This repository includes both the technical implementation and business-facing deliverables commonly used in consulting and business analytics engagements.
+
+| Asset                       | Description                                                                                                   |
+| --------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| 📄 Full Consulting Deck     | Executive presentation summarizing business context, analysis, findings, recommendations, and business impact |
+| 📊 Executive Summary        | One-slide overview of the project's key findings and business insights                                        |
+| 💡 Business Recommendations | Consulting-style recommendation framework connecting findings, actions, and expected impact                   |
+| 📓 Jupyter Notebooks        | End-to-end analytical workflow and implementation                                                             |
+
+---
+
+## 📊 Executive Summary Preview
+
+![Executive Summary](assets/executive_summary.png)
+
+---
+
+## 💡 Business Recommendations Preview
+
+![Business Recommendations](assets/business_recommendations.png)
+
+---
+
+## 📄 Full Consulting Deck
+
+A consulting-style presentation designed for business stakeholders, hiring managers, recruiters, and portfolio reviewers.
+
+**Download Presentation**
+
+```text
+presentation/marketplace_analytics_consulting_deck.pdf
+```
+
+---
+
 ## 📌 Executive Summary
 
 This project transforms marketplace transaction data into business insights that help independent resellers identify cross-selling opportunities, prioritize customer retention efforts, and improve inventory planning decisions.
@@ -46,14 +83,14 @@ The project uses three datasets representing customers, products, and marketplac
 
 ### Example Business Entities
 
-**Customers**
+#### Customers
 
 * PT Makanan Sehat
 * CV Minuman Segar
 * UMKM Dapur Bunda
 * Kopi Kita Bersama
 
-**Products**
+#### Products
 
 * Botol PET Bening 500ml
 * Standing Pouch Aluminium 250g
@@ -83,22 +120,23 @@ Forecast future demand and calculate inventory control metrics such as safety st
 ## 🔄 Project Workflow
 
 ```text
-Raw Marketplace Data
-          │
-          ▼
-Data Cleaning & Validation
-          │
-          ▼
-Processed Datasets
-     ┌────┼────┐
-     ▼    ▼    ▼
-Market  Customer  Demand
-Basket  Segment   Forecast
-Analysis  (RFM)
-     └────┼────┘
-          ▼
-Business Insights &
-Operational Recommendations
+        Raw Marketplace Data
+                 │
+                 ▼
+    Data Cleaning & Validation
+                 │
+                 ▼
+         Processed Datasets
+       ┌─────────┼─────────┐
+       ▼         ▼         ▼
+    Market    Customer   Demand
+    Basket    Segment   Forecast
+   Analysis    (RFM)
+       └─────────┬─────────┘
+                 │
+                 ▼
+        Business Insights &
+    Operational Recommendations
 ```
 
 ---
@@ -116,9 +154,6 @@ data/
     ├── data_produk.csv
     └── data_transaksi.csv
 
-doc/
-└── Ringkasan-Eksekutif-Optimasi-Inventaris.pdf
-
 notebooks/
 ├── 01_data_exploration_and_cleaning.ipynb
 ├── 02_market_basket_analysis.ipynb
@@ -135,6 +170,13 @@ outputs/
     ├── inventory_forecasting_summary.csv
     └── top_product_pairs.csv
 
+assets/
+├── executive_summary.png
+└── business_recommendations.png
+
+presentation/
+└── marketplace_analytics_consulting_deck.pdf
+
 README.md
 requirements.txt
 ```
@@ -145,60 +187,34 @@ requirements.txt
 
 ### 1. Data Exploration & Cleaning (`01_data_exploration_and_cleaning.ipynb`)
 
-This notebook prepares the datasets for downstream analysis by:
-
-* Validating data quality and schema consistency.
-* Handling missing and inconsistent values.
-* Standardizing customer, product, and transaction records.
-* Producing clean datasets stored in `data/processed/`.
-
-**Datasets**
-
-* **Customer Data:** Customer profiles, purchase counts, purchase recency, and feedback records.
-* **Product Data:** Product catalog information, categories, pricing, and stock levels.
-* **Transaction Data:** Historical order records including products purchased, quantities, transaction values, and margins.
-
----
+* Validated data quality and schema consistency.
+* Handled missing and inconsistent values.
+* Standardized customer, product, and transaction records.
+* Produced clean datasets for downstream analytics.
 
 ### 2. Market Basket Analysis (`02_market_basket_analysis.ipynb`)
 
-Market Basket Analysis identifies products that are frequently purchased together using association rule mining techniques.
-
 **Key Findings**
 
-* Botol PET Bening 500ml appears consistently across the strongest product combinations.
-* The Botol PET + Stand Pouch combination achieved the highest co-purchase frequency.
-* The results provide potential bundle recommendations for resellers seeking to increase cross-selling opportunities.
-
----
+* Botol PET Bening 500ml appeared consistently across the strongest product combinations.
+* Botol PET + Stand Pouch achieved the highest co-purchase frequency.
+* Results identified potential bundle recommendations to increase cross-selling opportunities.
 
 ### 3. Customer Segmentation (`03_customer_segmentation_rfm.ipynb`)
 
-Customers are segmented based on purchasing behavior to support targeted engagement strategies.
-
 **Key Findings**
 
-* **Potential Loyalists (50%)**: Active customers with strong growth potential.
-* **At Risk (33%)**: Customers showing declining purchase activity.
-* **Loyal Customers (17%)**: High-value customers with consistent purchasing behavior.
-
-These segments can be used to prioritize retention campaigns, loyalty programs, and promotional efforts.
-
----
+* Potential Loyalists (50%)
+* At Risk (33%)
+* Loyal Customers (17%)
 
 ### 4. Demand Forecasting & Inventory Optimization (`04_demand_forecasting.ipynb`)
 
-Historical sales trends are analyzed using a 7-day Simple Moving Average (SMA) to estimate short-term demand.
-
-Inventory planning metrics are then calculated using standard inventory management formulas.
-
 **Key Findings**
 
-* Forecasted next-week demand for the top-selling product: 56,500 units.
-* Recommended safety stock level: 62,282 units.
-* Recommended reorder point (ROP): 80,000 units.
-
-These metrics help reduce stockout risk while avoiding unnecessary overstocking.
+* Forecasted Demand: 56,500 units
+* Safety Stock: 62,282 units
+* Reorder Point (ROP): 80,000 units
 
 ---
 
@@ -210,30 +226,6 @@ These metrics help reduce stockout risk while avoiding unnecessary overstocking.
 | Customer Segmentation  | 50% of customers classified as Potential Loyalists               |
 | Demand Forecasting     | Reorder Point identified at 80,000 units                         |
 | Inventory Planning     | Safety Stock calculated at 62,282 units                          |
-
----
-
-## 💡 Business Recommendations
-
-Based on the analytical findings, marketplace resellers can take the following actions:
-
-### Increase Cross-Selling Revenue
-
-* Bundle Botol PET Bening 500ml with Stand Pouch products.
-* Create targeted promotions around frequently purchased product combinations.
-* Increase average order value through product package offerings.
-
-### Improve Customer Retention
-
-* Launch loyalty programs for high-value customers.
-* Develop personalized campaigns for Potential Loyalists.
-* Execute win-back campaigns for customers classified as At Risk.
-
-### Strengthen Inventory Planning
-
-* Monitor inventory levels against the calculated Reorder Point (ROP).
-* Maintain Safety Stock buffers to reduce stockout risk.
-* Use demand forecasts to support procurement planning and warehouse operations.
 
 ---
 
@@ -250,6 +242,28 @@ Based on the analytical findings, marketplace resellers can take the following a
 ### Demand Forecasting
 
 ![Demand Forecasting](outputs/charts/sales_trend_and_forecast.png)
+
+---
+
+## 💡 Business Recommendations
+
+### Increase Cross-Selling Revenue
+
+* Bundle Botol PET Bening 500ml with Stand Pouch products.
+* Create targeted promotions around frequently purchased product combinations.
+* Increase average order value through bundled offerings.
+
+### Improve Customer Retention
+
+* Launch loyalty programs for high-value customers.
+* Develop personalized campaigns for Potential Loyalists.
+* Execute win-back campaigns for At-Risk customers.
+
+### Strengthen Inventory Planning
+
+* Monitor inventory against the calculated Reorder Point.
+* Maintain Safety Stock buffers.
+* Use demand forecasts to support procurement planning.
 
 ---
 
@@ -275,7 +289,6 @@ Based on the analytical findings, marketplace resellers can take the following a
 ### Development Environment
 
 * Jupyter Notebook
-* CSV-Based Data Pipeline
 * Git & GitHub
 
 ---
@@ -291,6 +304,7 @@ Based on the analytical findings, marketplace resellers can take the following a
 
 ```bash
 git clone https://github.com/yourusername/marketplace-analytics.git
+
 cd marketplace-analytics
 
 python -m venv .venv
@@ -302,5 +316,22 @@ python -m venv .venv
 source .venv/bin/activate
 
 pip install -r requirements.txt
+
 jupyter notebook
 ```
+
+---
+
+### ⭐ Portfolio Highlight
+
+This project demonstrates end-to-end analytical problem solving, including:
+
+* Data Cleaning & Transformation
+* Customer Analytics & Segmentation
+* Market Basket Analysis
+* Demand Forecasting
+* Inventory Optimization
+* Business Recommendation Development
+* Executive Storytelling & Consulting-Style Reporting
+
+This section is especially valuable because recruiters often scroll to the bottom first. It clearly states the skills demonstrated by the project.

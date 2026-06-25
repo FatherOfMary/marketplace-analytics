@@ -36,13 +36,17 @@ This repository includes both the technical implementation and business-facing d
 
 ## 📄 Full Consulting Deck
 
-A consulting-style presentation designed for business stakeholders, hiring managers, recruiters, and portfolio reviewers.
+A consulting-style presentation that summarizes the business problem, analytical findings, business recommendations, and expected business impact.
 
-**Download Presentation**
+![Consulting Deck Preview](assets/marketplace_analytics_consulting_deck_preview.png)
 
-```text
-presentation/marketplace_analytics_consulting_deck.pdf
-```
+### 🎞️ Interactive Presentation
+
+[View on Speaker Deck](https://speakerdeck.com/sonetto/marketplace-analytics-customer-segmentation-market-basket-analysis-and-inventory-forecasting)
+
+### 📥 Download PDF
+
+[Download Consulting Deck](presentation/marketplace_analytics_consulting_deck.pdf)
 
 ---
 

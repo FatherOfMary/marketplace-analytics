@@ -148,6 +148,10 @@ Forecast future demand and calculate inventory control metrics such as safety st
 ## 📂 Repository Structure
 
 ```text
+assets/
+├── executive_summary.png
+└── business_recommendations.png
+
 data/
 ├── processed/
 │   ├── cleaned_data_pelanggan.csv
@@ -173,10 +177,6 @@ outputs/
     ├── customer_segmentation_rfm.csv
     ├── inventory_forecasting_summary.csv
     └── top_product_pairs.csv
-
-assets/
-├── executive_summary.png
-└── business_recommendations.png
 
 presentation/
 └── marketplace_analytics_consulting_deck.pdf

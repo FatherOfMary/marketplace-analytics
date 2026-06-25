@@ -46,7 +46,7 @@ A consulting-style presentation that summarizes the business problem, analytical
 
 ### 📥 Download PDF
 
-[Download Consulting Deck](presentation/marketplace_analytics_consulting_deck.pdf)
+[Download Consulting Deck](https://raw.githubusercontent.com/FatherOfMary/marketplace-analytics/main/presentation/marketplace_analytics_consulting_deck.pdf)
 
 ---
 
